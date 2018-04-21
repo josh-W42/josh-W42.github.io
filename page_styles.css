@@ -1,1 +1,7 @@
-"Hello World" 
+html{
+  background-color: #ffe4b3
+}
+#short_intro{
+  text-align: center;
+  font-size: 30pt;
+}
