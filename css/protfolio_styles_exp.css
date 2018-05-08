@@ -266,7 +266,7 @@ Media Queries
     background: inherit;
   }
   .container{
-    height: 400px;
+    height: 300px;
     padding-top: 150px;
   }
   .container p{
