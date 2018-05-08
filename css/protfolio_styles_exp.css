@@ -241,12 +241,12 @@ Media Queries
     margin-top: 5px;
   }
   header{
-    max-width: 1200px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
   }
   main{
-    max-width: 1200px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -273,7 +273,7 @@ Media Queries
     max-width: 400px;
   }
   footer{
-    max-width: 1200px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
   }
