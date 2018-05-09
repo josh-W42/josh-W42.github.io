@@ -16,8 +16,7 @@ p{
   padding: 10px;
   text-align: left;
   border-left: 3px solid #2d3c49;
-  border-right: 3px solid #2d3c49;
-  background-color: rgba(0,0,0,.2);
+  background-color: rgba(0,0,0,0.2);
 }
 .breakpoint{
   width: 100%;
@@ -35,6 +34,33 @@ a:visited {
   from { opacity: 0; margin-top: 200px;}
   to   { opacity: 1;}
 }
+#menu{
+  width: 100%;
+  right: -400px;
+  display: none;
+  position: absolute;
+  transition: 1s ease;
+  padding-left: 15px;
+  background: #e3e3e3;
+  margin: 0;
+}
+#menu a{
+  text-decoration: none;
+}
+.nav_option{
+  color: black;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  padding: 5px;
+  border-left: 3px solid #2d3c49;
+  transition: background 1s ease;
+}
+.nav_option:hover{
+  background: #2d3c49;
+  color: white;
+}
+
 /*
 *
 Header
@@ -50,12 +76,30 @@ Header
   margin: 5px;
   float: left;
 }
+#hamburger{
+  position: absolute;
+  font-size: 20pt;
+  margin: 15px;
+  z-index: 1;
+  cursor: pointer;
+}
+#crosshair{
+  font-size: 20pt;
+  z-index: 1;
+  font-weight: bold;
+  padding-left: 85%;
+  cursor: pointer;
+}
 /*
 *
 main content
 *
 */
 main{
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("../img/black_w.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   margin: 0;
   flex-wrap: wrap;
   display: flex;
@@ -69,6 +113,7 @@ main{
   width: 100%;
   background-size: cover;
   background-position: center;
+  transition: 1s ease;
 }
 .container h3, .container p{
   opacity: 0;
@@ -76,10 +121,12 @@ main{
   transition: 1s ease;
   margin-top: 50px;
 }
+.container p{
+  border-right: 3px solid #2d3c49;
+}
 #intro{
   order: 1;
   height: 600px;
-  background-color: #f2f2f2;
   padding: 20px;
   width: 100%;
 }
@@ -90,8 +137,8 @@ main{
   border-radius: 100%;
   border: 7px double black;
   box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.8);
-  -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 4s; /* Firefox < 16 */
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
 }
 #intro_greeting{
   color: black;
@@ -99,6 +146,9 @@ main{
   font-size: 25pt;
   -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 4s; /* Firefox < 16 */
+}
+#intro p{
+  background: inherit;
 }
 #showcase_animal_trading{
   order: 2;
@@ -177,6 +227,9 @@ Media Queries
     margin-left: auto;
     margin-right: auto;
   }
+  #menu{
+    right: -800px;
+  }
   .breakpoint{
     margin-top: 25px;
   }
@@ -241,14 +294,36 @@ Media Queries
     margin-top: 5px;
   }
   header{
-    max-width: 1000px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
   main{
-    max-width: 1000px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+  }
+  #menu{
+    width: 100%;
+    right: 0;
+    display: block;
+    position: relative;
+    padding-left: 15px;
+    background: #e3e3e3;
+    margin: 0;
+  }
+  #menu li{
+    display: inline;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 16pt;
+    border: hidden;
+  }
+  #crosshair{
+    display: none;
+  }
+  #hamburger{
+    display: none;
   }
   #intro{
     height: 700px;
@@ -273,7 +348,7 @@ Media Queries
     max-width: 400px;
   }
   footer{
-    max-width: 1000px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
