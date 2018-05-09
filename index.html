@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="authors" content="Joshua Wilson" />
+  <meta name="description" content="Front page of CodeX Inc." />
+  <meta name="keywords" content="CodeX, Eductation, progra" />
   <link rel="stylesheet" href="css/protfolio_styles_exp.css"/>
 </head>
 <body>
@@ -13,12 +15,21 @@
     <h2 class="header_title">Joshua Wilson</h2>
     <h5 class="header_title">Front-End Web Developer</h5>
     <div class="breakpoint"></div>
+    <nav>
+      <ul id="menu">
+        <span id="crosshair">X</span>
+        <a href="#intro_greeting"><li class="nav_option">About</li></a>
+        <a href="#showcase_animal_trading"><li class="nav_option">Projects</li></a>
+        <a href="#contact_info"><li class="nav_option">Contact info</li></a>
+      </ul>
+      <span id="hamburger">&#9776;</span>
+    </nav>
   </header>
   <main>
     <div id="intro">
       <img id="profile_pic" src="img/profile_pic.png" alt="picture of me" />
       <h2 id="intro_greeting">Hi.</h2>
-      <p>I'm Josh Wilson, I'm currently studying Linguistics and Computer Science at UCLA. Thank you for visiting my site and be sure to check out my projects listed bellow. </p>
+      <p>I'm Josh Wilson, I'm a student at UCLA studying Linguistics and Computer Science. Thank you for visiting my website and be sure to check out my projects listed bellow. </p>
     </div>
     <div id="showcase_pixel_art" class="container">
       <h3>PIXEL ART MAKER</h3>
@@ -40,10 +51,15 @@
       <!-- Photo by Rebecca Oliver on Unsplash -->
     </div>
   </main>
-  <footer>
+  <footer id="contact_info">
     <a href="https://www.linkedin.com/in/jdwilson42"><img src="img/linkedin-logo.png" alt="linkedin-icon"></a>
     <a href="https://github.com/josh-W42" ><img src="img/github-logo.png" alt="github-icon"></a>
-    <div>Icons made by <a href="https://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    <div>
+      <span>Icons made by <a href="https://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></span>
+      <br />
+      <span>Images were optained from <a href="https://unsplash.com/">Unsplash.com</a>.</span>
+    </div>
   </footer>
 </body>
+<script src="js/portfolio.js"></script>
 </html>
