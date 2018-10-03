@@ -51,6 +51,7 @@ a:visited {
   padding-left: 15px;
   background: #e3e3e3;
   margin: 0;
+  z-index: 999;
 }
 
 #menu a {
@@ -78,6 +79,15 @@ Header
 *
 */
 
+header {
+  position: fixed;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #e3e3e3;
+  z-index: 999;
+}
+
 .header_title {
   text-align: right;
   margin: 5px;
@@ -86,7 +96,6 @@ Header
 
 #header_logo {
   max-height: 50px;
-  margin: 5px;
   float: left;
 }
 
@@ -94,13 +103,13 @@ Header
   position: absolute;
   font-size: 20pt;
   margin: 15px;
-  z-index: 1;
+  z-index: 999;
   cursor: pointer;
 }
 
 #crosshair {
   font-size: 20pt;
-  z-index: 1;
+  z-index: 999;
   font-weight: bold;
   padding-left: 85%;
   cursor: pointer;
@@ -118,7 +127,7 @@ main {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  margin: 0;
+  margin: 0px;
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
@@ -126,36 +135,38 @@ main {
   width: 100%;
 }
 
-.container {
-  height: 300px;
+.projectDiv {
+  height: 10%;
   padding: 25px;
   width: 100%;
   background-size: cover;
   background-position: center;
   transition: 1s ease;
+  box-sizing: content-box;
 }
 
-.container h3,
-.container p {
+.projectDiv h3,
+.projectDiv p {
+  font-weight: bold;
   opacity: 0;
   -webkit-transition: 1s ease; /* Safari */
   transition: 1s ease;
   margin-top: 50px;
 }
 
-.container p {
+.projectDiv p {
   border-right: 3px solid #2d3c49;
 }
 
 #intro {
   order: 1;
-  height: 600px;
+  margin-top: 20%;
   padding: 20px;
   width: 100%;
+  z-index: 1;
 }
 
 #profile_pic {
-  margin-top: 50px;
   height: 200px;
   width: 200px;
   border-radius: 100%;
@@ -167,10 +178,9 @@ main {
 
 #intro_greeting {
   color: black;
-  margin-top: 50px;
   font-size: 25pt;
-  -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 4s; /* Firefox < 16 */
+  /* -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */ */
+  /* -moz-animation: fadein 4s; /* Firefox < 16 */ */
 }
 
 #intro p {
@@ -180,6 +190,7 @@ main {
 #showcase_animal_trading {
   order: 2;
   background-image: url("../img/cards.jpg");
+  max-width: 100%;
 }
 
 #showcase_animal_trading:hover {
@@ -188,7 +199,7 @@ main {
 
 #showcase_animal_trading:hover h3,
 #showcase_animal_trading:hover p {
-    opacity: 1;
+  opacity: 1;
 }
 
 #showcase_pixel_art {
@@ -202,7 +213,7 @@ main {
 
 #showcase_pixel_art:hover h3,
 #showcase_pixel_art:hover p {
-    opacity: 1;
+  opacity: 1;
 }
 
 #showcase_memory_game {
@@ -216,7 +227,7 @@ main {
 
 #showcase_memory_game:hover h3,
 #showcase_memory_game:hover p {
-    opacity: 1;
+  opacity: 1;
 }
 
 #showcase_classic_game {
@@ -225,12 +236,40 @@ main {
 }
 
 #showcase_classic_game:hover {
-  background-image: linear-gradient(rgba(255, 163, 216,0.8), rgba(255, 200, 216,0.8)), url("../img/arcade.jpg");
+    background-image: linear-gradient(rgba(255, 163, 216,0.8), rgba(255, 200, 216,0.8)), url("../img/arcade.jpg");
 }
 
 #showcase_classic_game:hover h3,
 #showcase_classic_game:hover p {
-    opacity: 1;
+  opacity: 1;
+}
+
+#showcase_foundations {
+  order: 6;
+  background-image: url("../img/foundations.jpg");
+}
+
+#showcase_foundations:hover {
+  background-image: linear-gradient(rgba(50,50,50,0.8), rgba(261,248,172,0.8)), url("../img/foundations.jpg");
+}
+
+#showcase_foundations:hover h3,
+#showcase_foundations:hover p {
+  opacity: 1;
+}
+
+#showcase_review_app {
+  order: 7;
+  background-image: url("../img/restaurantReview.jpg");
+}
+
+#showcase_review_app:hover {
+  background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("../img/restaurantReview.jpg");
+}
+
+#showcase_review_app:hover h3,
+#showcase_review_app:hover p {
+  opacity: 1;
 }
 
 /*
@@ -246,6 +285,30 @@ footer {
   font-size: 9pt;
   padding: 20px;
   text-align: center;
+}
+
+footer div {
+  border-left: 3px solid #2d3c49;
+  background-color: rgba(0,0,0,0.2);
+  display: inline-block;
+  width: 50%;
+  margin: auto;
+
+}
+
+.footer_label {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+footer a {
+  vertical-align: super;
+}
+
+@media screen and (max-width: 992px) {
+  footer div {
+    width: 90%;
+  }
 }
 
 /*
@@ -271,109 +334,101 @@ Media Queries
   body{
     font-size: 20pt;
   }
-  
+
   p {
     max-width: none;
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   #menu {
     right: -800px;
   }
-  
+
   .breakpoint {
     margin-top: 25px;
   }
-  
+
   #header_logo {
-    margin: 10px;
     max-height: 75px;
   }
-  
+
   .header_title {
     margin: 10px;
   }
-  
+
   #intro {
-    height: 900px;
     padding: 40px;
   }
-  
-  #profile_pic {
-    margin-top: 150px;
-    vertical-align: middle;
-  }
-  
+
+
   #intro p {
     margin-top: 125px;
     background: inherit;
   }
-  
+
   #intro_greeting {
     font-size: 35pt;
     display: inline;
     margin-left: 50px;
     vertical-align: -50px;
   }
-  
+
   @keyframes fadein {
     from { opacity: 0; margin-top: 300px;}
     to   { opacity: 1;}
   }
-  
+
   /* Firefox < 16 */
-  
+
   @-moz-keyframes fadein {
     from { opacity: 0; margin-top: 300px;}
     to   { opacity: 1;}
   }
-  
-  .container {
-    height: 300px;
+
+  .projectDiv {
     width: 50%;
     font-weight: bolder;
     padding-top: 100px;
     padding: 0;
   }
-  
-  .container p {
+
+  .projectDiv p {
     max-width: 250px;
     font-size: 16pt;
   }
-  
+
   footer {
     font-size: 13pt;
   }
-  
-  footer img {
+
+  footer {
     margin-top: 15px;
     height: 50px;
   }
 }
 
 @media screen and (min-width: 1024px) {
- 
+
   p {
     max-width: 800px;
   }
-  
+
   .breakpoint {
     margin-top: 5px;
   }
-  
+
   header {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 80%;
+    margin-left: 10%;
   }
-  
+
   main {
-    max-width: 1200px;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   #menu {
     width: 100%;
     right: 0;
@@ -383,7 +438,7 @@ Media Queries
     background: #e3e3e3;
     margin: 0;
   }
-  
+
   #menu li {
     display: inline;
     margin-left: 50px;
@@ -391,49 +446,38 @@ Media Queries
     font-size: 16pt;
     border: hidden;
   }
-  
+
   #crosshair {
     display: none;
   }
-  
+
   #hamburger {
     display: none;
   }
-  
-  #intro {
-    height: 700px;
-  }
-  
-  #profile_pic {
-    margin-top: 100px;
-    vertical-align: middle;
-  }
-  
+
   #intro_greeting {
     font-size: 50pt;
-    vertical-align: -50px;
   }
-  
+
   #intro p {
     margin-top: 150px;
     background: inherit;
   }
-  
-  .container {
-    height: 300px;
+
+  .projectDiv {
     padding-top: 150px;
+    height: 350px;
   }
-  
-  .container p {
+
+  .projectDiv p {
     max-width: 400px;
   }
-  
+
   footer {
-    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   footer img {
     margin-top: 15px;
     height: 30px;

@@ -7,7 +7,6 @@
   <meta name="authors" content="Joshua Wilson" />
   <meta name="description" content="Udacity Portfolio" />
   <meta name="keywords" content="Joshua Wilson, Josh Wilson, Udacity Portfolio" />
-  <link rel="stylesheet" href="css/protfolio_styles_exp.css"/>
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon.png">
@@ -17,6 +16,13 @@
   <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="css/protfolio_styles_exp.css"/>
+
 </head>
 <body>
   <header>
@@ -26,21 +32,23 @@
     <div class="breakpoint"></div>
     <nav>
       <ul id="menu">
-        <span id="crosshair">X</span>
-        <a href="#intro_greeting"><li class="nav_option">About</li></a>
-        <a href="#showcase_animal_trading"><li class="nav_option">Projects</li></a>
-        <a href="#contact_info"><li class="nav_option">Contact info</li></a>
+        <a id="aboutNav" href="#"><li class="nav_option">About</li></a>
+        <a id="projectNav" href="#"><li class="nav_option">Projects</li></a>
+        <a id="contactNav" href="#"><li class="nav_option">Contact info</li></a>
       </ul>
-      <span id="hamburger">&#9776;</span>
     </nav>
   </header>
   <main>
-    <div id="intro">
-      <img id="profile_pic" src="img/profile_pic.png" alt="picture of me" />
-      <h2 id="intro_greeting">Hi.</h2>
-      <p>I'm Josh Wilson, I'm a student at UCLA studying Linguistics and Computer Science. Thank you for visiting my website and be sure to check out my projects listed below. </p>
+    <div id="intro" class="row">
+      <div class="col-lg-12">
+        <img id="profile_pic" src="img/profile_pic.png" alt="picture of me" />
+        <h2 id="intro_greeting">Hi.</h2>
+      </div>
+      <div class="col-lg-12">
+        <p>I'm Josh Wilson, I'm a student at UCLA studying Linguistics and Computer Science. Thank you for visiting my website and be sure to check out my projects listed below. </p>
+      </div>
     </div>
-    <div id="showcase_pixel_art" class="container">
+    <div id="showcase_pixel_art" class="projectDiv">
       <h3>PIXEL ART MAKER</h3>
       <!-- Photo by Joao Tzanno on Unsplash -->
       <p>
@@ -48,19 +56,19 @@
         <a href="https://josh-w42.github.io/Pixel-Art-Maker/" target="_blank">Check it out here</a>
       </p>
     </div>
-    <div id="showcase_animal_trading" class="container">
+    <div id="showcase_animal_trading" class="projectDiv">
       <h3>ANIMAL TRADING CARD</h3>
       <!-- Photo by Jack Hamilton on Unsplash -->
       <p>Built with CSS and HTML, this animal trading card showcases one of my favorite animals.</p>
     </div>
-    <div id="showcase_memory_game" class="container">
+    <div id="showcase_memory_game" class="projectDiv">
       <h3>MEMORY GAME</h3>
       <p>
         This little memory game uses javascript to mimic a game called 'concentration'.
         <a href="https://josh-w42.github.io/Memory-Game/" target="_blank">Check it out here</a>
       </p>
     </div>
-    <div id="showcase_classic_game" class="container">
+    <div id="showcase_classic_game" class="projectDiv">
       <h3>CLASSIC ARCADE GAME</h3>
       <p>
         A javascript built replica of the classic 2D game, Frogger.
@@ -68,16 +76,44 @@
       </p>
       <!-- Photo by Rebecca Oliver on Unsplash -->
     </div>
+    <div id="showcase_foundations" class="projectDiv">
+      <h3>Foundations Choreography</h3>
+      <p>
+        A website built for an organization I will never forget.
+        <a href="https://josh-w42.github.io/testing-environment-fc/" target="_blank">Check it out here</a>
+      </p>
+    </div>
+    <div id="showcase_review_app" class="projectDiv">
+      <h3>Restauant Reviews App</h3>
+      <p>
+        A Udacity project where I had to put my responsive CSS and accessibility skills to the test.
+        <a href="https://josh-w42.github.io/mws-restaurant-stage-1/" target="_blank">Check it out here</a>
+      </p>
+      <!-- Photo by Ian Baldwin on Unsplash -->
+    </div>
   </main>
   <footer id="contact_info">
-    <a href="https://www.linkedin.com/in/jdwilson42" target="_blank"><img src="img/linkedin-logo.png" alt="linkedin-icon"></a>
-    <a href="https://github.com/josh-W42" target="_blank"><img src="img/github-logo.png" alt="github-icon"></a>
     <div>
+      <span class="footer_label">Email:</span> jwilson022@gmail.com
+      <span class="footer_label">LinkedIn:</span>
+      <a href="https://www.linkedin.com/in/jdwilson42" target="_blank"><img src="img/linkedin-logo.png" alt="linkedin-icon"></a>
+      <span class="footer_label">Github:</span>
+      <a href="https://github.com/josh-W42" target="_blank"><img src="img/github-logo.png" alt="github-icon"></a>
+    </div>
+    <!-- <div>
       <span>Icons made by <a href="https://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></span>
       <br />
       <span>Images were optained from <a href="https://unsplash.com/">Unsplash.com</a>.</span>
-    </div>
+    </div> -->
   </footer>
 </body>
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- bootsrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- native js -->
 <script src="javascript/portfolio.js"></script>
+
 </html>
