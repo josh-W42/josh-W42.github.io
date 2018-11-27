@@ -272,6 +272,21 @@ main {
   opacity: 1;
 }
 
+#showcase_neighborhood_map {
+  order: 7;
+  background-image: url("../img/map.jpg");
+  color: #E5E5E5;
+}
+
+#showcase_neighborhood_map:hover {
+  background-image: linear-gradient(rgba(166, 103, 76, 0.8), rgba(166, 103, 76, 0.8)), url("../img/map.jpg");
+}
+
+#showcase_neighborhood_map:hover h3,
+#showcase_neighborhood_map:hover p {
+  opacity: 1;
+}
+
 /*
 *
 Footer
