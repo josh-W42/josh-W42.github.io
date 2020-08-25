@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <title>J|W</title>
+  <title>Portfolio Website</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="authors" content="Joshua Wilson" />
@@ -18,17 +18,295 @@
   <meta name="theme-color" content="#ffffff">
 
   <!-- bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
   <!-- custom css -->
   <link rel="stylesheet" href="css/protfolio_styles_exp.css"/>
 
+  <!-- For development -->
+  <!-- <meta http-equiv="refresh" content="6"> -->
+  
 </head>
 <body>
   <header>
+    <nav id='nav' class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"><img class="img-fluid logo" src="./img/new_logo.png" alt="logo" /></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <div class="list-group" id="list-tab" role="tablist">
+            <li class="nav-item active">
+              <a class="nav-link" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="list-about-list" data-toggle="list" href="#list-about" role="tab" aria-controls="about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="list-projects-list" data-toggle="list" href="#list-projects" role="tab" aria-controls="profile">Projects</a>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <main role="main">
+    <div class="container w-100">
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+          <div class="jumbotron">
+            <div class="container">
+              <h1 class="display-3">Hi there,</h1>
+              <p>My name is Joshua, I'm a web developer based in Los Angeles, CA.</p>
+            </div>
+          </div>
+          <div class="container">
+            <!-- Example row of columns -->
+            <div class="row">
+              <div class="col-md-4 skill-card">
+                <h2>Web Dev</h2>
+                <p>
+                  My background is in front-end web developement,
+                  but I'm working on expanding into full-stack developement.
+                </p>
+                <div class="row">
+                  <div class="skill-col col-sm-6">
+                    <h3>Front-end:</h3>
+                    <ul>
+                      <li>HTML5 / CSS3</li>
+                      <li>Javascript</li>
+                      <li>Bootstrap.JS</li>
+                      <li>React.JS</li>
+                    </ul>
+                  </div>
+                  <div class="skill-col col-sm-6">
+                    <h3>Back-end:</h3>
+                    <ul>
+                      <li>Flask</li>
+                      <li>PostgreSQL</li>
+                      <li>SQLaclchemy</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 skill-card">
+                <h2>Computer Science</h2>
+                <p>
+                  I have a non-traditional background
+                  in CS, so everyday I'm learning
+                  something new to improve my skills.
+                </p>
+                <div class="row">
+                  <div class="skill-col col-sm-6">
+                    <h3>Tools:</h3>
+                    <ul>
+                      <li>Python</li>
+                      <li>C++</li>
+                      <li>Git/Github</li>
+                    </ul>
+                  </div>
+                  <div class="skill-col col-sm-6">
+                    <h3>Concepts:</h3>
+                    <ul>
+                      <li>Databases</li>
+                      <li>Data Structures</li>
+                      <li>Algorithms</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 skill-card">
+                <h2>Soft Skills</h2>
+                <p>
+                  These are a collection of skills gained from
+                  past work experiences, vollunteering, and hobbies,
+                  that guide my work ethic.
+                </p>
+                <div class="row">
+                  <div class="skill-col col-sm-6">
+                    <ul>
+                      <li>Perseverance</li>
+                      <li>Leadership</li>
+                      <li>Teamwork</li>
+                    </ul>
+                  </div>
+                  <div class="skill-col col-sm-6">
+                    <ul>
+                      <li>Creativity</li>
+                      <li>Problem Solving</li>
+                      <li>Empathy</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>        
+            <hr>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="list-about" role="tabpanel" aria-labelledby="list-about-list">
+          <div class="card mb-3 info-card d-flex" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-sm-6 about-col">
+                <img class="card-img-top img-fluid me-img" src="img/profile_pic-min.png" alt="picture of Joshua Wilson" />
+              </div>
+              <div class="col-sm-6 about-col">
+                <div class="card-body">
+                  <h5 class="card-title">Joshua Wilson</h5>
+                  <span class="lead">Former Bruin / Runner / Gamer</span> 
+                  <ul>
+                    <li>
+                      Location:<p>Los Angeles, CA</p>
+                    </li>
+                    <li>
+                      Email:<p>wilson.jd022@gmail.com</p>
+                    </li>
+                    <li></li>                    
+                  </ul> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2>About me:</h2>
+          <div class="row">
+            <div class="col-sm-6 p-0">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex">
+                    <img class="card-img-top img-fluid ucla-img" src="img/ucla.png" alt="graphic with UCLA symbol" />
+                    <h5 class="card-title mt-auto">I Studied Applied Linguistics.</h5>
+                  </div>
+                  <p class="card-text">
+                    Being a first generation college student proved to be
+                    challenging but I don't regret any of the hardships I experienced.
+                    From 2014 until 2020, I had nearly completed my degree, however, due to financial
+                    concerns I had to put my college career on pause. I plan on returning to complete
+                    my degree at some point in the future.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 p-0">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex">
+                    <img class="card-img-top img-fluid code-img" src="img/code.png" alt="graphic symbols of favorite things" />
+                    <h5 class="card-title mt-auto">I'm currently studying web development.</h5>
+                  </div>
+                  <p class="card-text">
+                    I started studying web developement in 2018 by getting a
+                    Grow With Google scholarship to a "Nanodegree" program by Udacity.
+                    After that, I went into more depht into web developement by
+                    branching into full-stack topics and by studying more core CS topics.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 p-0">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex">
+                    <img class="card-img-top img-fluid game-img" src="img/game.png" alt="graphic involving gamming" />
+                    <h5 class="card-title mt-auto">From a very young age, I loved gaming.</h5>
+                  </div>
+                  <p class="card-text">
+                    Getting introduced to gaming was also my introduction to
+                    computers and technology. By observing how games are designed
+                    and built I gained more inspiration to study CS topics.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 p-0">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex">
+                    <img class="card-img-top img-fluid running-img" src="img/running.png" alt="graphic involving running" />
+                    <h5 class="card-title mt-auto">I live and breath running.</h5>
+                  </div>
+                  <p class="card-text">
+                    From 2010 to 2016, I trained to run long distances
+                    competitively; I even ran for the UCLA team. Now, I
+                    only run for fun and exercise. Throughout my experinece,
+                    the sport helpped me develop discipline, motivation, and teamwork.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="list-projects" role="tabpanel" aria-labelledby="list-settings-list">
+          <!-- TODO, apply custom -->
+          <div class="card-columns">
+            <div class="card bg-dark text-white">
+              <img src="./img/brain.jpg" class="card-img" alt="drawing of brain">
+              <div class="card-img-overlay" tabindex="0">
+                <div class="card-title btn btn-primary justify-content-center">
+                  <h3>Memory Game</h3>
+                  <p class="card-text">This little memory game uses javascript to mimic a game called 'concentration'.</p>
+                  <label for="class-skill-list">Skills used:</label>
+                  <ul class="card-skill-list">
+                    <li>HTML/CSS</li>
+                    <li>Javascript</li>
+                    <li>Bootstrap.js</li>
+                  </ul>
+                  <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://josh-w42.github.io/Memory-Game/">Check It Out</a>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-dark text-white">
+              <img src="./img/arcade-min.jpg" class="card-img" alt="image of an arcade">
+              <div class="card-img-overlay" tabindex="0">
+                <div class="card-title btn btn-primary justify-content-center">
+                  <h3>Arcade Game</h3>
+                  <p class="card-text">A javascript built replica of the classic 2D game, Frogger.</p>
+                  <label for="class-skill-list">Skills used:</label>
+                  <ul class="card-skill-list">
+                    <li>OOP Javascript</li>
+                    <li>HTML5 Canvas</li>
+                  </ul>
+                  <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://josh-w42.github.io/frontend-nanodegree-arcade-game/">Check It Out</a>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-dark text-white">
+              <img src="./img/map-min.jpg" class="card-img" alt="representation of a map">
+              <div class="card-img-overlay" tabindex="0">
+                <div class="card-title btn btn-primary justify-content-center">
+                  <h3>React Map</h3>
+                  <p class="card-text">A single page application uses the Google Maps API to create local map.</p>
+                  <label for="class-skill-list">Skills used:</label>
+                  <ul class="card-skill-list">
+                    <li>APIs</li>
+                    <li>React.js</li>
+                  </ul>
+                  <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://josh-w42.github.io/Neighborhood-Map-Project/">Check It Out</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <table class="table">
+        <tr> 
+          <td><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jdwilson42/"><i class="fab fa-linkedin-in"></i></a><p>Linkedin</p></td>
+          <td><a target="_blank" rel="noopener noreferrer" href="https://github.com/josh-W42"><i class="fab fa-github"></i></a><p>Github</p></td>
+          <td><a target="_blank" rel="noopener noreferrer" href="mailto: wilson.jd022@gmail.com"><i class="fas fa-envelope"></i></a><p>Email</p></td>
+        </tr>
+      </table>
+    </div>
+  </footer> 
+  
+  <!-- <header>
     <img id="header_logo" src="img/logo.jpg" alt="logo" />
-    <h2 class="header_title">Joshua Wilson</h2>
-    <h5 class="header_title">Front-End Web Developer</h5>
     <div class="breakpoint"></div>
     <nav>
       <ul id="menu">
@@ -41,7 +319,6 @@
   <main>
     <div id="intro" class="row">
       <div class="col-lg-12">
-        <img id="profile_pic" src="img/profile_pic.png" alt="picture of me" />
         <h2 id="intro_greeting">Hi.</h2>
       </div>
       <div class="col-lg-12">
@@ -50,7 +327,7 @@
     </div>
     <div id="showcase_pixel_art" class="projectDiv">
       <h3>PIXEL ART MAKER</h3>
-      <!-- Photo by Joao Tzanno on Unsplash -->
+      Photo by Joao Tzanno on Unsplash
       <p>
         This web app uses javascript to allow users to create their own pixel art.
         <a href="https://josh-w42.github.io/Pixel-Art-Maker/" target="_blank">Check it out here</a>
@@ -58,10 +335,11 @@
     </div>
     <div id="showcase_animal_trading" class="projectDiv">
       <h3>ANIMAL TRADING CARD</h3>
-      <!-- Photo by Jack Hamilton on Unsplash -->
+      Photo by Jack Hamilton on Unsplash
       <p>Built with CSS and HTML, this animal trading card showcases one of my favorite animals.</p>
     </div>
     <div id="showcase_memory_game" class="projectDiv">
+      <img src="img/brain.jpg" alt="pixel art photo" />
       <h3>MEMORY GAME</h3>
       <p>
         This little memory game uses javascript to mimic a game called 'concentration'.
@@ -74,7 +352,7 @@
         A javascript built replica of the classic 2D game, Frogger.
         <a href="https://josh-w42.github.io/frontend-nanodegree-arcade-game/" target="_blank">Check it out here</a>
       </p>
-      <!-- Photo by Rebecca Oliver on Unsplash -->
+      Photo by Rebecca Oliver on Unsplash
     </div>
     <div id="showcase_foundations" class="projectDiv">
       <h3>Foundations Choreography</h3>
@@ -89,7 +367,7 @@
         A Udacity project where I had to put my responsive CSS and accessibility skills to the test.
         <a href="https://josh-w42.github.io/mws-restaurant-stage-1/" target="_blank">Check it out here</a>
       </p>
-      <!-- Photo by Ian Baldwin on Unsplash -->
+      Photo by Ian Baldwin on Unsplash
     </div>
     <div id="showcase_neighborhood_map" class="projectDiv">
       <h3>Neighborhood Map</h3>
@@ -97,7 +375,7 @@
         A react web application built from scratch that displays a local map.
         <a href="https://josh-w42.github.io/Neighborhood-Map-Project/" target="_blank">Check it out here</a>
       </p>
-      <!-- Photo by Thor Alvis on Unsplash -->
+      Photo by Thor Alvis on Unsplash
     </div>
   </main>
   <footer id="contact_info">
@@ -108,18 +386,26 @@
       <span class="footer_label">Github:</span>
       <a href="https://github.com/josh-W42" target="_blank"><img src="img/github-logo.png" alt="github-icon"></a>
     </div>
-    <!-- <div>
+    <div>
       <span>Icons made by <a href="https://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></span>
       <br />
       <span>Images were optained from <a href="https://unsplash.com/">Unsplash.com</a>.</span>
     </div> -->
-  </footer>
+  <!-- </footer> -->
 </body>
+<!-- Bootstrap ultilites -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+<!-- This is for font Awesome -->
+<script src="https://kit.fontawesome.com/8462a8e640.js" crossorigin="anonymous"></script>
+
 <!-- jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 
 <!-- bootsrap -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 <!-- native js -->
 <script src="javascript/portfolio.js"></script>
