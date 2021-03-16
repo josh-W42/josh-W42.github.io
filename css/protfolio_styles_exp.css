@@ -231,6 +231,7 @@ nav .active {
 #list-projects .card:hover .card-title,
 #list-projects .card-img-overlay:focus .card-title,
 #list-projects .card-title:focus {
+  overflow: scroll;
   margin: 0px;
   width: 100%;
   height: 100%;
