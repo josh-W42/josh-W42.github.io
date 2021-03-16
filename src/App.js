@@ -1,10 +1,11 @@
 import './App.css';
-// import TabPanel from './components/TabPanel';
+import SideNav from './components/Nav';
 
 function App() {
 
   return (
     <div className="App">
+      <SideNav />
     </div>
   );
 }

@@ -1,0 +1,16 @@
+.nav-container {
+  top: 40%;
+  width: 120px;
+  padding: 0px;
+  background-color: darkgrey;
+}
+
+.nav-link {
+  width: 100%;
+  color: white;
+}
+
+.nav-link:hover {
+  background: black;
+  color: white;
+}
