@@ -12,6 +12,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Fade from '@material-ui/core/Fade';
+import Zoom from '@material-ui/core/Zoom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     background: "rgba(53, 58, 64, 0.7)",
     color: "white",
-    minHeight: 350,
+    minHeight: 400,
     margin: 10,
   },
   grid: {
@@ -45,9 +46,18 @@ const Projects = (props) => {
   const classes = useStyles();
 
   const projectArray = projects.map((project, index) => {
+    const formattedDate = () => {
+      console.log(project);
+      let date = project.date.toDateString();
+      date = date.split(" ");
+      return `${date[1]} ${date[3]}`;
+    }
+
+    const date = formattedDate();
+
     return (
       <Grid item xs={10} md={3} className={classes.grid} key={`project-${project.title}`}>
-        <Fade in={true} style={{ transitionDelay: `${100 * index}ms` }}>
+        <Zoom in={true} style={{ transitionDelay: `${100 * index}ms` }}>
           <Card className={classes.card} elevation={3}>
             <CardMedia
               className={classes.projectImg}
@@ -58,17 +68,18 @@ const Projects = (props) => {
               <Typography gutterBottom variant="h5" component="h2">
                 {project.title}
               </Typography>
+              <Typography variant="subtitle1" component="p" >
+                {date}
+              </Typography>
               <Typography variant="body2" component="p">
                 {project.short_description}
               </Typography>
             </CardContent>
-            {/* <CardActionArea>
-            </CardActionArea> */}
             <CardActions>
-              <ProjectModal />
+              <ProjectModal date={date} project={project} />
             </CardActions>
           </Card>
-        </Fade>
+        </Zoom>
       </Grid>
     );
   });
@@ -76,7 +87,7 @@ const Projects = (props) => {
 
   return ( 
     <div id="projectsContainer" className={classes.root}>
-      <Grid container justify="space-around">
+      <Grid container justify="center">
         {projectArray}
       </Grid>
     </div>

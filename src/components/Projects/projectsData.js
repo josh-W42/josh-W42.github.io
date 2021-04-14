@@ -13,6 +13,8 @@ const projectsData = [
       "Front-End",
     ],
     date: new Date(2021, 0, 20),
+    githubUrl: "https://github.com/josh-W42/minesweeper",
+    deployedUrl: "https://josh-w42.github.io/minesweeper/",
     imageUrl:
       "https://res.cloudinary.com/dom5vocai/image/upload/v1618349995/explosion_urchi5.png",
   },
@@ -20,7 +22,7 @@ const projectsData = [
     title: "Crane",
     short_description: "A full stack social media application.",
     long_description:
-      "Crane is a full stack social media application. Users can create posts and flocks (groups) and then comment on posts. My inspiration for making creating this project was facebook and reddit",
+      "Crane is a full stack social media application. Users can create posts and flocks (groups) and then comment on posts. My inspiration for making this project was facebook and reddit",
     skills: [
       "Express",
       "Object Relational Mapper (ORM)",
@@ -37,6 +39,8 @@ const projectsData = [
       "Full-Stack",
     ],
     date: new Date(2021, 1, 18),
+    githubUrl: "https://github.com/josh-W42/crane",
+    deployedUrl: "https://crane-jw42.herokuapp.com/",
     imageUrl:
       "https://res.cloudinary.com/dom5vocai/image/upload/v1613426540/crane_logo_xzo7cm.png",
   },
@@ -61,6 +65,8 @@ const projectsData = [
       "Full-Stack",
     ],
     date: new Date(2021, 2, 15),
+    githubUrl: "https://github.com/josh-W42/munch-frontend",
+    deployedUrl: "https://munch-react.herokuapp.com/",
     imageUrl:
       "https://res.cloudinary.com/dom5vocai/image/upload/v1615689944/possibleLogo_nbghky.svg",
   },
@@ -78,6 +84,8 @@ const projectsData = [
       "Front-End",
     ],
     date: new Date(2018, 7, 15),
+    githubUrl: "https://github.com/josh-W42/Neighborhood-Map-Project",
+    deployedUrl: "https://josh-w42.github.io/Neighborhood-Map-Project/",
     imageUrl:
       "https://res.cloudinary.com/dom5vocai/image/upload/v1618354089/map-min_cgscdw.jpg",
   },
@@ -97,6 +105,8 @@ const projectsData = [
       "Front-End",
     ],
     date: new Date(2018, 5, 23),
+    githubUrl: "https://github.com/josh-W42/frontend-nanodegree-arcade-game",
+    deployedUrl: "https://josh-w42.github.io/frontend-nanodegree-arcade-game/",
     imageUrl:
       "https://res.cloudinary.com/dom5vocai/image/upload/v1618356387/arcade-min_qsxtn6.jpg",
   },
@@ -113,6 +123,8 @@ const projectsData = [
       "Game Development",
       "Front-End",
     ],
+    githubUrl: "https://github.com/josh-W42/Memory-Game",
+    deployedUrl: "https://josh-w42.github.io/Memory-Game/",
     date: new Date(2018, 4, 31),
     imageUrl:
       "https://res.cloudinary.com/dom5vocai/image/upload/v1618355192/brain_cvaw7j.jpg",
@@ -136,6 +148,8 @@ const projectsData = [
       "Full-Stack",
     ],
     date: new Date(2021, 3, 10),
+    githubUrl: "https://github.com/josh-W42/taskshare-frontend",
+    deployedUrl: "https://taskshare-42.herokuapp.com/",
     imageUrl:
       "https://res.cloudinary.com/dom5vocai/image/upload/v1618357269/stil-vdaJJbls3xE-unsplash_q00wl5.jpg",
   },

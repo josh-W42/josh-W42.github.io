@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import React, { useState } from 'react';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
@@ -8,8 +8,12 @@ import MuiDialogActions from '@material-ui/core/DialogActions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
+import Paper from '@material-ui/core/Paper';
+import Chip from '@material-ui/core/Chip';
 
-const styles = (theme) => ({
+
+const styles = makeStyles((theme) => ({
   root: {
     margin: 0,
     padding: theme.spacing(2),
@@ -20,37 +24,30 @@ const styles = (theme) => ({
     top: theme.spacing(1),
     color: theme.palette.grey[500],
   },
-});
-
-const DialogTitle = withStyles(styles)((props) => {
-  const { children, classes, onClose, ...other } = props;
-  return (
-    <MuiDialogTitle disableTypography className={classes.root} {...other}>
-      <Typography variant="h6">{children}</Typography>
-      {onClose ? (
-        <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
-          <CloseIcon />
-        </IconButton>
-      ) : null}
-    </MuiDialogTitle>
-  );
-});
-
-const DialogContent = withStyles((theme) => ({
-  root: {
+  content: {
     padding: theme.spacing(2),
   },
-}))(MuiDialogContent);
-
-const DialogActions = withStyles((theme) => ({
-  root: {
+  actions: {
     margin: 0,
     padding: theme.spacing(1),
   },
-}))(MuiDialogActions);
+  chipList: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    listStyle: 'none',
+    padding: theme.spacing(0.5),
+    margin: 0,
+  },
+  chip: {
+    margin: theme.spacing(0.5),
+  },
+}));
 
 const ProjectModal = (props) => {
   const [open, setOpen] = useState(false);
+
+  const classes = styles();
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -59,35 +56,49 @@ const ProjectModal = (props) => {
     setOpen(false);
   };
 
+  const skillArray = props.project.skills.map((skill, index) => {
+    return (
+      <li key={`skill-${skill}-for-${props.project.title}`}>
+        <Chip label={skill} className={classes.chip} variant="outlined" />
+      </li>
+    );
+  });
+
   return (
     <div>
       <Button variant="outlined" color="inherit" onClick={handleClickOpen}>
-        Open dialog
+        More Details
       </Button>
       <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
-        <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-          Modal title
-        </DialogTitle>
-        <DialogContent dividers>
+        <div id="customized-dialog-title">
+          <Typography className={classes.root} variant="h6">{props.project.title} - {props.date}</Typography>
+          <IconButton aria-label="close" className={classes.closeButton} onClick={handleClose}>
+            <CloseIcon />
+          </IconButton>
+        </div>
+        <div className={classes.content}>
           <Typography gutterBottom>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-            in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            {props.project.long_description}
           </Typography>
-          <Typography gutterBottom>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
-            lacus vel augue laoreet rutrum faucibus dolor auctor.
+          <Typography variant="h6">
+            Skills Used:
           </Typography>
-          <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
-            auctor fringilla.
-          </Typography>
-        </DialogContent>
-        <DialogActions>
-          <Button autoFocus onClick={handleClose} color="primary">
-            Save changes
-          </Button>
-        </DialogActions>
+          <Paper className={classes.chipList} elevation={4} component="ul">
+            {skillArray}
+          </Paper>
+        </div>
+        <div className={classes.actions}>
+          <Link href={props.project.githubUrl} target="_blank" rel="noopener noreferrer" color="inherit">
+            <Button color="primary">
+              Link to Github Repo
+            </Button>
+          </Link>
+          <Link href={props.project.deployedUrl} target="_blank" rel="noopener noreferrer" color="inherit">
+            <Button color="primary">
+              Link to Deployed App
+            </Button>
+          </Link>
+        </div>
       </Dialog>
     </div>
   );
