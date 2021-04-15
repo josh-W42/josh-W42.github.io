@@ -1,7 +1,7 @@
 #HomeContainer {
   animation: fadeIn;
   animation-duration: 2s;
-
+  height: 30vh;
 }
 
 @keyframes fadeIn {
