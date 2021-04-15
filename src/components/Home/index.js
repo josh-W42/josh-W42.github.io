@@ -1,5 +1,4 @@
-import Fade from 'react-bootstrap/Fade';
-import Image from 'react-bootstrap/Image'
+import Image from 'react-bootstrap/Image';
 import { useState } from 'react';
 import './home.css';
 import Typography from '@material-ui/core/Typography';
@@ -21,8 +20,8 @@ const useStyles = makeStyles((theme) => ({
   text: {
     fontSize: '1.25rem',
     color: 'white',
-    fontWeight: "bolder",
-    textShadow: "1px 2px white",
+    fontWeight: "bold",
+    textShadow: "1px 1px white",
     [theme.breakpoints.up('sm')]: {
       fontSize: "2rem",
     },
