@@ -6,12 +6,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import Grid from "@material-ui/core/Grid";
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import Fade from '@material-ui/core/Fade';
 import Zoom from '@material-ui/core/Zoom';
 
 const useStyles = makeStyles((theme) => ({
@@ -47,7 +45,6 @@ const Projects = (props) => {
 
   const projectArray = projects.map((project, index) => {
     const formattedDate = () => {
-      console.log(project);
       let date = project.date.toDateString();
       date = date.split(" ");
       return `${date[1]} ${date[3]}`;
