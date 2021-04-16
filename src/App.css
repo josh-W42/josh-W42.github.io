@@ -1,5 +1,4 @@
 body {
-  background-color: #243447;
   background-color: #212121;
   width: 100%;
 }
@@ -18,10 +17,108 @@ body {
   height: 100%;
 }
 
+/* Containers */
+
+#HomeContainer {
+  animation: fadeIn;
+  animation-duration: 2s;
+  height: 30vh;
+}
+
+#ContactContainer {
+  animation: fadeIn;
+  animation-duration: 2s;
+  height: 30vh;
+  width: 100%;
+}
+
+#AboutContainer {
+  animation: fadeIn;
+  animation-duration: 2s;
+  height: 50vh;
+  width: 100%;
+  color: white;
+  font-weight: bolder;
+  top: 60%;
+}
+
+/* Side Nav */
+
+#sideNav {
+  top: 40%;
+  width: 120px;
+  padding: 0px;
+  background-color: rgba(53, 58, 64, 1);
+  display: none;
+}
+
+#sideNav .nav-link {
+  width: 100%;
+  color: white;
+}
+
+#sideNav .nav-link:hover {
+  background: black;
+  color: white;
+}
+
+/* Top Nav */
+
+#topNav .nav-link {
+  color: white;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5%;
+}
+
+#topNav .nav-link:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Keyframe Animations */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 456px) {
+  #AboutContainer {
+    width: 100%;
+    top: 30%;
+  }
+  #ContactContainer {
+    width: 75%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   #particles-js {
     z-index: 0;
     height: 140%;
+  }
+
+  #AboutContainer {
+    width: 75%;
+  }
+
+  #ContactContainer {
+    width: 50%;
+  }
+
+  #sideNav {
+    display: block;
+  }
+
+  #topNav {
+    display: none;
   }
 
   .App {

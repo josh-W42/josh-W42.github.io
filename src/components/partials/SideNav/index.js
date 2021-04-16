@@ -1,4 +1,3 @@
-import './nav.css';
 import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom';
 
@@ -14,6 +13,9 @@ const SideNav = (props) => {
         </Link>
         <Link to="/projects" className="nav-link" role="button">
           <i className="fas fa-code"></i><span className="ms-2">Projects</span>
+        </Link>
+        <Link to="/contact" className="nav-link" role="button">
+          <i className="fas fa-address-book"></i><span className="ms-2">Contact</span>
         </Link>
       </Nav>
     </nav>

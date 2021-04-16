@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { withStyles, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import IconButton from '@material-ui/core/IconButton';
@@ -23,10 +23,14 @@ const styles = makeStyles((theme) => ({
   },
   content: {
     padding: theme.spacing(2),
+    background: "#212121",
+    color: "#E5E5E5",
   },
   actions: {
     margin: 0,
     padding: theme.spacing(1),
+    background: "#212121",
+    color: "#E5E5E5",
   },
   chipList: {
     display: 'flex',
@@ -35,9 +39,17 @@ const styles = makeStyles((theme) => ({
     listStyle: 'none',
     padding: theme.spacing(0.5),
     margin: 0,
+    background: "#212121",
+    color: "#E5E5E5",
+  },
+  dialog: {
+    background: "#212121",
+    color: "#E5E5E5",
   },
   chip: {
     margin: theme.spacing(0.5),
+    color: "#E5E5E5",
+    borderColor: "#B7B7B7",
   },
 }));
 
@@ -67,7 +79,7 @@ const ProjectModal = (props) => {
         More Details
       </Button>
       <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
-        <div id="customized-dialog-title">
+        <div className={classes.dialog} id="customized-dialog-title">
           <Typography className={classes.root} variant="h6">{props.project.title} - {props.date}</Typography>
           <IconButton aria-label="close" className={classes.closeButton} onClick={handleClose}>
             <CloseIcon />
@@ -86,12 +98,12 @@ const ProjectModal = (props) => {
         </div>
         <div className={classes.actions}>
           <Link href={props.project.githubUrl} target="_blank" rel="noopener noreferrer" color="inherit">
-            <Button color="primary">
+            <Button color="inherit">
               Link to Github Repo
             </Button>
           </Link>
           <Link href={props.project.deployedUrl} target="_blank" rel="noopener noreferrer" color="inherit">
-            <Button color="primary">
+            <Button color="inherit">
               Link to Deployed App
             </Button>
           </Link>

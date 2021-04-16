@@ -145,6 +145,7 @@ const projectsData = [
       "JavaScript",
       "Node.js",
       "MERN",
+      "Socket.io",
       "Full-Stack",
     ],
     date: new Date(2021, 3, 10),

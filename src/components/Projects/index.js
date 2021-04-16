@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import projectsData from "./projectsData";
 import ProjectModal from "../partials/ProjectModal";
 import { makeStyles } from '@material-ui/core/styles';
-
-
 import Grid from "@material-ui/core/Grid";
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -11,11 +9,13 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Zoom from '@material-ui/core/Zoom';
+// import { Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
     margin: "auto",
+    color: "#E5E5E5",
     [theme.breakpoints.up('sm')]: {
       width: "80%",
     },
@@ -23,12 +23,15 @@ const useStyles = makeStyles((theme) => ({
   card: {
     width: "100%",
     background: "rgba(53, 58, 64, 0.7)",
-    color: "white",
+    color: "#E5E5E5",
     minHeight: 400,
     margin: 10,
   },
   grid: {
     margin: "1px",
+  },
+  title: {
+    fontWeight: 'bold',
   },
   projectImg: {
     opacity: 0.8,
@@ -39,9 +42,39 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Projects = (props) => {
-  const [projects, setProjects] = useState(projectsData);
+  const [projects, setProjects] = useState([]);
+  const [sortKey, setSortKey] = useState('date');
 
   const classes = useStyles();
+
+  useEffect(() => {
+    sortProjects(sortKey);
+    console.log('hi');
+  }, [sortKey]);
+
+  const sortProjects = (key) => {
+    switch (key) {
+      case 'date':
+        setProjects((projects) => {
+          return projectsData.sort((a, b) => b.date.valueOf() - a.date.valueOf());
+        });
+        break;
+      case 'front-end':
+        setProjects((projects) => {
+          return projectsData.sort((a, b) => b.skills.includes('Front-End') - a.skills.includes('Front-End'));
+        });
+        break;
+      case 'full-stack':
+        setProjects((projects) => {
+          return projectsData.sort((a, b) => b.skills.includes('Full-Stack') - a.skills.includes('Full-Stack'));
+        });
+        break;
+      default:
+        console.log('No sort');
+        setProjects(projectsData);
+        break;
+    }
+  }
 
   const projectArray = projects.map((project, index) => {
     const formattedDate = () => {
@@ -62,7 +95,7 @@ const Projects = (props) => {
               title={project.title}
             />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
+              <Typography className={classes.title} gutterBottom variant="h5" component="h2">
                 {project.title}
               </Typography>
               <Typography variant="subtitle1" component="p" >
@@ -83,7 +116,19 @@ const Projects = (props) => {
 
 
   return ( 
-    <div id="projectsContainer" className={classes.root}>
+    <div id="ProjectsContainer" className={classes.root}>
+      {/* <Grid container justify="space-evenly">
+        <Grid item>
+          <Button size="small" variant="outlined" onClick={() => } color="inherit">Sort By Date</Button>
+        </Grid>
+        <Grid item>
+          <Button size="small" variant="outlined" color="inherit">Full Stack First</Button>
+        </Grid>
+        <Grid item>
+          <Button size="small" variant="outlined" color="inherit">Front-End First</Button>
+        </Grid>
+      </Grid> */}
+      <br />
       <Grid container justify="center">
         {projectArray}
       </Grid>

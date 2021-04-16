@@ -1,6 +1,5 @@
 import Image from 'react-bootstrap/Image';
 import { useState } from 'react';
-import './home.css';
 import Typography from '@material-ui/core/Typography';
 import Typist from 'react-typist';
 import { makeStyles } from '@material-ui/core';
@@ -19,7 +18,7 @@ const names = [
 const useStyles = makeStyles((theme) => ({
   text: {
     fontSize: '1.25rem',
-    color: 'white',
+    color: '#E5E5E5',
     fontWeight: "bold",
     textShadow: "1px 1px white",
     [theme.breakpoints.up('sm')]: {

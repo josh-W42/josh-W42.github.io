@@ -1,6 +1,4 @@
 import Image from 'react-bootstrap/Image';
-import './about.css';
-
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -9,11 +7,14 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import GetAppIcon from '@material-ui/icons/GetApp';
+import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   card: {
     background: "transparent",
-    color: "white",
+    color: "#E5E5E5",
     margin: "0 auto",
     height: "fit-content",
     width: "100%",
@@ -23,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
   },
   titles: {
     fontWeight: "bold",
+  },
+  link: {
+    color: "inherit",
   },
   paragraph: {
     fontSize: "1.25rem",
@@ -120,6 +124,10 @@ const About = (props) => {
               <Typography className={classes.titles} component="h2">
                 Full Stack Web Developer
               </Typography>
+              <br />
+              <Link className={classes.link} to="/assets/img/Design_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <Button variant="outlined" color="inherit"><GetAppIcon/> Resume</Button>
+              </Link>
             </Grid>
           </Grid>
         </CardContent>
