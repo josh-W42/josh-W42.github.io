@@ -57,7 +57,10 @@ const Contact = (props) => {
               Joshua Wilson
             </Typography>
             <Typography variant="h6" component="h2">
-              Contact Me
+              Los Angeles, CA
+            </Typography>
+            <Typography variant="h6" component="h2">
+              <EmailIcon /><span className="ms-1">wilson.jd022@gmail.com</span>
             </Typography>
           </Grid>
         </Grid>
@@ -74,7 +77,7 @@ const Contact = (props) => {
               <Link className={classes.link} href="mailto: wilson.jd022@gmail.com" target="_blank" rel="noopener noreferrer">
                 <Button color="inherit" size="large">
                   <EmailIcon className="ms-1" />
-                  <span className="ms-1">Email</span>
+                  <span className="ms-1">Send An Email</span>
                 </Button>
               </Link>
             </Grid>

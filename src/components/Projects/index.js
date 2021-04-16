@@ -9,7 +9,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Zoom from '@material-ui/core/Zoom';
-// import { Button } from "@material-ui/core";
+import Paper from "@material-ui/core/Paper";
+import Chip from "@material-ui/core/Chip";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     background: "rgba(53, 58, 64, 0.7)",
     color: "#E5E5E5",
-    minHeight: 400,
+    minHeight: 550,
     margin: 10,
   },
   grid: {
@@ -38,6 +39,21 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: 200,
   },
+  chip: {
+    margin: theme.spacing(0.5),
+    color: "#E5E5E5",
+    borderColor: "#B7B7B7",
+  },
+  chipList: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    listStyle: 'none',
+    padding: theme.spacing(0.5),
+    margin: 0,
+    background: "inherit",
+    color: "#E5E5E5",
+  },
 }));
 
 
@@ -49,7 +65,6 @@ const Projects = (props) => {
 
   useEffect(() => {
     sortProjects(sortKey);
-    console.log('hi');
   }, [sortKey]);
 
   const sortProjects = (key) => {
@@ -85,6 +100,14 @@ const Projects = (props) => {
 
     const date = formattedDate();
 
+    const skillArray = project.topSkills.map((skill) => {
+      return (
+        <li key={`top-skill-${skill}-for-${project.title}`}>
+          <Chip label={skill} className={classes.chip} variant="outlined" />
+        </li>
+      );
+    });
+
     return (
       <Grid item xs={10} md={3} className={classes.grid} key={`project-${project.title}`}>
         <Zoom in={true} style={{ transitionDelay: `${100 * index}ms` }}>
@@ -104,6 +127,13 @@ const Projects = (props) => {
               <Typography variant="body2" component="p">
                 {project.short_description}
               </Typography>
+              <hr></hr>
+              <Typography variant="h6" component="p">
+                Top Skills:
+              </Typography>
+              <Paper className={classes.chipList} elevation={0} component="ul">
+                {skillArray}
+              </Paper>
             </CardContent>
             <CardActions>
               <ProjectModal date={date} project={project} />

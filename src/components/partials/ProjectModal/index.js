@@ -65,7 +65,7 @@ const ProjectModal = (props) => {
     setOpen(false);
   };
 
-  const skillArray = props.project.skills.map((skill, index) => {
+  const skillArray = props.project.skills.map((skill) => {
     return (
       <li key={`skill-${skill}-for-${props.project.title}`}>
         <Chip label={skill} className={classes.chip} variant="outlined" />
@@ -74,7 +74,7 @@ const ProjectModal = (props) => {
   });
 
   return (
-    <div>
+    <div className="m-auto">
       <Button variant="outlined" color="inherit" onClick={handleClickOpen}>
         More Details
       </Button>

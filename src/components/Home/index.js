@@ -11,7 +11,8 @@ const names = [
   "General Assembly Bootcamp Grad",
   "Long Distance Runner",
   "Former UCLA Bruin",
-  "Avid Gamer",
+  "Passionate Gamer",
+  "Life Long Learner",
   "Traveler",
 ];
 
@@ -20,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1.25rem',
     color: '#E5E5E5',
     fontWeight: "bold",
-    textShadow: "1px 1px white",
     [theme.breakpoints.up('sm')]: {
       fontSize: "2rem",
     },

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const SideNav = (props) => {
   return (
-    <nav id="sideNav" className="container position-absolute rounded">
+    <nav id="sideNav" className="container position-fixed rounded">
       <Nav defaultActiveKey="/" variant="pills" className="flex-column">
         <Link to="/" className="nav-link" role="button">
           <i className="fas fa-home"></i><span className="ms-2">Home</span>

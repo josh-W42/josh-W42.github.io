@@ -64,6 +64,10 @@ body {
 
 /* Top Nav */
 
+#topNav {
+  z-index: 2;
+}
+
 #topNav .nav-link {
   color: white;
   width: fit-content;
