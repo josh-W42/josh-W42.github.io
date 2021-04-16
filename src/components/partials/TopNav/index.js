@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import Image from 'react-bootstrap/Image';
 import { useState } from 'react';
 
 const TopNav = (props) => {
@@ -13,7 +14,10 @@ const TopNav = (props) => {
   return (
     <Navbar id="topNav" className="navbar-dark bg-dark" expand="lg" expanded={expanded}>
       <Link to="/" className="nav-link" role="button">
-        <Navbar.Brand className="ms-2 text-reset">Joshua Wilson</Navbar.Brand>
+        <Navbar.Brand className="ms-2 text-reset">
+          <Image src="https://res.cloudinary.com/dom5vocai/image/upload/v1615930252/new_logo_bwgzbl.png" width="50px" height="50px" rounded />
+          Joshua Wilson
+        </Navbar.Brand>
       </Link>
       <Navbar.Toggle onClick={toggleExpanded} aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
