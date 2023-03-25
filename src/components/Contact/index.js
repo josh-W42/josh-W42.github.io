@@ -98,7 +98,7 @@ const Contact = (props) => {
               </Link>
             </Grid>
             <Grid item>
-              <Link className={classes.link} href="/assets/img/Design_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <Link className={classes.link} href="/assets/img/Resume_Joshua_Wilson.pdf" target="_blank" rel="noopener noreferrer">
                 <Button color="inherit" size="large">
                   <GetAppIcon className="ms-1" />{" "}
                   <span className="ms-1">Resume</span>
