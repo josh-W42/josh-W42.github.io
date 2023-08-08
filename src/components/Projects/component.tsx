@@ -122,17 +122,7 @@ export const ProjectsComponent: FunctionComponent<Props> = ({ projects }) => {
   });
 
   return (
-    <div
-      id="ProjectsContainer"
-      style={{
-        width: '100%',
-        margin: 'auto',
-        color: '#E5E5E5',
-        // [theme.breakpoints.up('sm')]: {
-        //   width: '80%',
-        // },
-      }}
-    >
+    <div id="ProjectsContainer">
       {/* <Grid container justify="space-evenly">
         <Grid item>
           <Button size="small" variant="outlined" onClick={() => } color="inherit">Sort By Date</Button>

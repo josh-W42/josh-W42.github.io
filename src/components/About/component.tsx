@@ -80,7 +80,7 @@ export const AboutComponent: FunctionComponent<Props> = ({
               </Typography>
               <br />
               <Link
-                to="/assets/img/Design_Resume.pdf"
+                to="/assets/img/Resume_Josh_Wilson.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: 'inherit' }}
