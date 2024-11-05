@@ -1,6 +1,7 @@
 import { FunctionComponent, useEffect, useState } from 'react';
 import { ProjectsComponent } from './component';
 import { Project, projectsData } from './projectsData';
+import './projects.css';
 
 export const Projects: FunctionComponent = () => {
   const [projects, setProjects] = useState<Project[]>([]);
