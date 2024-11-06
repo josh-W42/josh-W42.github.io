@@ -128,10 +128,12 @@ body {
 
   #AboutContainer {
     width: 75%;
+    max-width: 1000px;
   }
 
   #ContactContainer {
     width: 50%;
+    max-width: 800px;
   }
 
   #sideNav {
