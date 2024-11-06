@@ -54,7 +54,7 @@ export const projectsData: Project[] = [
     topSkills: ['Full-Stack', 'Express', 'Authorization'],
     date: new Date(2021, 1, 18),
     githubUrl: 'https://github.com/josh-W42/crane',
-    deployedUrl: 'https://crane-jw42.herokuapp.com/',
+    deployedUrl: '',
     imageUrl:
       'https://res.cloudinary.com/dom5vocai/image/upload/v1613426540/crane_logo_xzo7cm.png',
   },
@@ -81,7 +81,7 @@ export const projectsData: Project[] = [
     topSkills: ['Full-Stack', 'MERN Stack', 'Data Structures and Algorithms'],
     date: new Date(2021, 2, 15),
     githubUrl: 'https://github.com/josh-W42/munch-frontend',
-    deployedUrl: 'https://munch-react.herokuapp.com/',
+    deployedUrl: '',
     imageUrl:
       'https://res.cloudinary.com/dom5vocai/image/upload/v1615689944/possibleLogo_nbghky.svg',
   },
@@ -95,13 +95,13 @@ export const projectsData: Project[] = [
       'JavaScript',
       'APIs',
       'HTML / CSS',
-      'Google Maps',
+      'Google Maps API',
       'Front-End',
     ],
     topSkills: ['Front-End', 'React.js', 'APIs'],
     date: new Date(2018, 7, 15),
     githubUrl: 'https://github.com/josh-W42/Neighborhood-Map-Project',
-    deployedUrl: 'https://josh-w42.github.io/Neighborhood-Map-Project/',
+    deployedUrl: '',
     imageUrl:
       'https://res.cloudinary.com/dom5vocai/image/upload/v1618354089/map-min_cgscdw.jpg',
   },
@@ -169,7 +169,7 @@ export const projectsData: Project[] = [
     topSkills: ['Full-Stack', 'Socket.io', 'MERN Stack'],
     date: new Date(2021, 3, 10),
     githubUrl: 'https://github.com/josh-W42/taskshare-frontend',
-    deployedUrl: 'https://taskshare-42.herokuapp.com/',
+    deployedUrl: '',
     imageUrl:
       'https://res.cloudinary.com/dom5vocai/image/upload/v1618357269/stil-vdaJJbls3xE-unsplash_q00wl5.jpg',
   },

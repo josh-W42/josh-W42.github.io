@@ -127,6 +127,7 @@ export const ProjectModalComponent: FunctionComponent<Props> = ({
             </Button>
           </Link>
           <Link
+            display={project.deployedUrl ? undefined : 'none'}
             href={project.deployedUrl}
             target="_blank"
             rel="noopener noreferrer"
