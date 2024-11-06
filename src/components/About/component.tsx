@@ -76,11 +76,11 @@ export const AboutComponent: FunctionComponent<Props> = ({
                 Joshua Wilson
               </Typography>
               <Typography sx={{ fontWeight: 'bold' }} component="h2">
-                Full Stack Web Developer
+                Software Engineer
               </Typography>
               <br />
               <Link
-                to="/assets/img/Resume_Josh_Wilson.pdf"
+                to="/assets/img/Resume_Joshua_Wilson.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: 'inherit' }}
