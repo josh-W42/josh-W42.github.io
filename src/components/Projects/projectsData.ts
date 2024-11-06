@@ -173,4 +173,28 @@ export const projectsData: Project[] = [
     imageUrl:
       'https://res.cloudinary.com/dom5vocai/image/upload/v1618357269/stil-vdaJJbls3xE-unsplash_q00wl5.jpg',
   },
+  {
+    title: 'ChatUp',
+    short_description: 'A real time chat application',
+    long_description:
+      'ChatUp is a real-time chat application built using React, Redux, and Typescript on the front-end and Express and Typescript on the backend API. Currently using Firebase real-time database and hosting.',
+    skills: [
+      'Material-UI',
+      'Express.js',
+      'Authentication',
+      'React.js',
+      'Redux',
+      'Typescript',
+      'Node.js',
+      'Firebase',
+      'Socket.io',
+      'Full-Stack',
+    ],
+    topSkills: ['Full-Stack', 'React', 'Typescript'],
+    date: new Date(2021, 9, 1),
+    githubUrl: 'https://github.com/josh-W42/chatup',
+    deployedUrl: '',
+    imageUrl:
+      'https://res.cloudinary.com/dom5vocai/image/upload/f_auto,q_auto/sn5kdn9hk7yekj4ieagw',
+  },
 ];
