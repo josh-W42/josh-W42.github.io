@@ -7,6 +7,9 @@ body {
   overflow: auto;
   max-height: 100vh;
   z-index: 2;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 #particles-js {
@@ -50,6 +53,7 @@ body {
   padding: 0px;
   background-color: rgba(53, 58, 64, 1);
   display: none;
+  left: 0;
 }
 
 #sideNav .nav-link {
@@ -66,6 +70,7 @@ body {
 
 #topNav {
   z-index: 2;
+  width: 100%;
 }
 
 #topNav .nav-link {
@@ -112,8 +117,6 @@ body {
 
   #ProjectsContainer {
     width: 75%;
-    height: 70%;
-    left: 15%;
   }
 }
 
@@ -145,6 +148,5 @@ body {
 
   #ProjectsContainer {
     height: 100%;
-    left: 12%;
   }
 }

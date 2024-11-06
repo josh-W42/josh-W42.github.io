@@ -34,7 +34,7 @@ export const ProjectsComponent: FunctionComponent<Props> = ({ projects }) => {
           <Chip
             label={skill}
             sx={{
-              margin: '0',
+              margin: '2px',
               color: '#E5E5E5',
               borderColor: '#B7B7B7',
             }}
@@ -49,9 +49,9 @@ export const ProjectsComponent: FunctionComponent<Props> = ({ projects }) => {
         item
         xs={10}
         md={3}
-        sx={{
-          margin: '1px',
-        }}
+        xl={2}
+        sx={{ margin: '5px', minWidth: '300px', maxWidth: '300px' }}
+        style={{ maxWidth: '350px' }}
         key={`project-${project.title}`}
       >
         <Zoom in={true} style={{ transitionDelay: `${100 * index}ms` }}>
