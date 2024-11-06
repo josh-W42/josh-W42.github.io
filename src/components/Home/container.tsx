@@ -7,11 +7,15 @@ export const Home: FunctionComponent = () => {
     1500,
     "I'm a... Software Engineer",
     1500,
-    "I'm a... Long Distance Runner",
+    "I'm a... Marathon Runner",
     1500,
-    "I'm a... Gaming Enthusiast",
+    "I'm a... Problem Solver",
+    1500,
+    "I'm a... UCLA Bruin",
     1500,
     "I'm a... Life Long Learner",
+    1500,
+    "I'm a... Trekkie",
     1500,
   ];
 
