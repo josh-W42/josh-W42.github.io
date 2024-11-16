@@ -117,6 +117,7 @@ export const ProjectModalComponent: FunctionComponent<Props> = ({
           }}
         >
           <Link
+            display={project.githubUrl ? undefined : 'none'}
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
