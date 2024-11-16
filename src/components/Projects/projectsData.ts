@@ -339,4 +339,27 @@ export const projectsData: Project[] = [
     imageUrl:
       'https://res.cloudinary.com/dom5vocai/image/upload/f_auto,q_auto/tgkn38ozghqjkqwgf7cp',
   },
+  {
+    title: 'Flower Identifier',
+    short_description: 'Deep Learning Project using a CNN with Pytorch',
+    long_description:
+      'The goal of this project was to identify the species of flowers from images using a convolutional neural network (CNN). After the model was trained, the model would return a percentage of which species it thought the flower was and the data would be displayed on a bar graph.',
+    skills: [
+      'Deep Learning',
+      'Neural Networks',
+      'CNN',
+      'Python',
+      'Pytorch',
+      'Experiment',
+      'Coursework',
+      'Numpy',
+      'Model Training',
+    ],
+    topSkills: ['Deep Learning', 'Python', 'Pytorch'],
+    date: new Date(2019, 8, 30),
+    githubUrl: 'https://github.com/josh-W42/image_classification_CNN',
+    deployedUrl: '',
+    imageUrl:
+      'https://res.cloudinary.com/dom5vocai/image/upload/f_auto,q_auto/zkktz6jreyyhnssbdklb',
+  },
 ];
