@@ -60,7 +60,7 @@ export const projectsData: Project[] = [
   },
   {
     title: 'Munch',
-    short_description: 'A full stack food delivery application',
+    short_description: 'A full stack food delivery application.',
     long_description:
       'Munch is a full stack web app designed to mimic the likes of Uber Eats and Postmates. I worked on this project alongside my General Assembly classmates, Nelson Valerio and Andrew Bith. Some examples of features I worked on were the feed page, account settings page, and the use of a Trie for search bar autocompletion.',
     skills: [
@@ -175,7 +175,7 @@ export const projectsData: Project[] = [
   },
   {
     title: 'ChatUp',
-    short_description: 'A real time chat application',
+    short_description: 'A real time chat application.',
     long_description:
       'ChatUp is a real-time chat application built using React, Redux, and Typescript on the front-end and Express and Typescript on the backend API. Currently using Firebase real-time database and hosting.',
     skills: [
@@ -191,10 +191,134 @@ export const projectsData: Project[] = [
       'Full-Stack',
     ],
     topSkills: ['Full-Stack', 'React', 'Typescript'],
-    date: new Date(2021, 9, 1),
+    date: new Date(2021, 6, 1),
     githubUrl: 'https://github.com/josh-W42/chatup',
     deployedUrl: '',
     imageUrl:
       'https://res.cloudinary.com/dom5vocai/image/upload/f_auto,q_auto/sn5kdn9hk7yekj4ieagw',
+  },
+  {
+    title: 'Infinite Jump Game',
+    short_description: 'A mobile game built in Godot',
+    long_description:
+      'I wanted to try something new so I explored how to create a 2D "infinite jumping" type of mobile game where the player is constantly climbing vertically.',
+    skills: [
+      'Game Development',
+      'Godot Engine',
+      'GDscript',
+      'Mobile',
+      'Scripting',
+      'Level Design',
+      '2D Game',
+      'Coursework',
+    ],
+    topSkills: ['Game Dev', 'Mobile', 'Godot'],
+    date: new Date(2024, 5, 2),
+    githubUrl: 'https://github.com/josh-W42/infinite-jumper-clone',
+    deployedUrl: '',
+    imageUrl:
+      'https://res.cloudinary.com/dom5vocai/image/upload/f_auto,q_auto/ofktvprfysjvhz99p2qv',
+  },
+  {
+    title: 'Social Media Discord Bot',
+    short_description: 'A node.js server that houses a discord bot',
+    long_description:
+      'The goal of this project was to create a discord bot that would post to a discord server when new social media data was detected. I wanted to also learn about about self hosting so I configured it to run on my Raspberry Pi and run it from there.',
+    skills: [
+      'Experimentation',
+      'Node.JS',
+      'Discord API',
+      'YouTube API',
+      'Automation',
+      'Backend',
+      'TypeScript',
+    ],
+    topSkills: ['Backend', 'Node.JS', 'TypeScript'],
+    date: new Date(2024, 4, 2),
+    githubUrl: 'https://github.com/josh-W42/discord_social_bot',
+    deployedUrl: '',
+    imageUrl:
+      'https://res.cloudinary.com/dom5vocai/image/upload/f_auto,q_auto/pp0taolc7sdm482pxyvx',
+  },
+  {
+    title: 'Martian Mike',
+    short_description: 'A 2D Platforming Side Scrolling Game.',
+    long_description:
+      'Just me trying out game dev in Godot! The goal of this game is to reach a finish line and avoid obstacles of increasing difficulty.',
+    skills: [
+      'Game Development',
+      'Godot Engine',
+      'GDscript',
+      'Scripting',
+      'Side Scrolling',
+      'Level Design',
+      '2D Game',
+      'Coursework',
+    ],
+    topSkills: ['Game Dev', 'Godot', '2D'],
+    date: new Date(2024, 4, 30),
+    githubUrl: 'https://github.com/josh-W42/martian_mike_training',
+    deployedUrl: '',
+    imageUrl:
+      'https://res.cloudinary.com/dom5vocai/image/upload/f_auto,q_auto/q3dpspwcqeb0esdybmqv',
+  },
+  {
+    title: '3D Portfolio',
+    short_description:
+      '*Work in Progress* A Three.JS portfolio that showcase my projects in Blender.',
+    long_description:
+      'I spent a fair amount of time this year learning about blender and how to model, sculpt, and render 3D scenes + models. So I wanted to build a 3D portfolio to showcase my work.',
+    skills: [
+      'React.js',
+      'Three.js',
+      '3D Modeling',
+      'Front-End',
+      'Blender',
+      'Experimentation',
+    ],
+    topSkills: ['React.js', 'Three.js', 'Front-end'],
+    date: new Date(2024, 6, 30),
+    githubUrl: '',
+    deployedUrl: '',
+    imageUrl:
+      'https://res.cloudinary.com/dom5vocai/image/upload/f_auto,q_auto/j0kvkyo4zmur4oyxhzlc',
+  },
+  {
+    title: 'ShadeShift',
+    short_description:
+      '*Work in Progress* A color palette generator inspired by the awesome Coolors.co.',
+    long_description:
+      'The goal of this project was to dive into color theory and learn how to solve some interesting problems, like image color extraction and color palette discovery.',
+    skills: [
+      'Full Stack',
+      'Python',
+      'Flask',
+      'React.js',
+      'TypeScript',
+      'UI / UX',
+      'Responsive Web Design',
+      'Material UI',
+      'OpenCV',
+      'Scikit',
+    ],
+    topSkills: ['Python', 'React', 'TypeScript', 'Full Stack'],
+    date: new Date(2024, 9, 30),
+    githubUrl: '',
+    deployedUrl: '',
+    imageUrl:
+      'https://res.cloudinary.com/dom5vocai/image/upload/f_auto,q_auto/cpr9tkwvdlhqigl0nyw8',
+  },
+  {
+    title: 'Pixel Art Maker',
+    short_description: 'A website where users can create pixel art.',
+    long_description:
+      'This was one of the first few projects I created. It allows users to create a grid of their choosing and then make simple pixel art with limited tools.',
+    skills: ['JavaScript', 'Front-End', 'HTML', 'CSS', 'git'],
+    topSkills: ['Front-End', 'HTML/CSS', 'JavaScript'],
+    date: new Date(2018, 5, 30),
+    githubUrl: 'https://github.com/josh-W42/Pixel-Art-Maker',
+    deployedUrl: 'https://josh-w42.github.io/Pixel-Art-Maker/',
+    imageUrl:
+      'https://res.cloudinary.com/dom5vocai/image/upload/f_auto,q_auto/ujo3hlp4p9hazxyrygav',
   },
 ];
