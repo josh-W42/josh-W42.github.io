@@ -321,4 +321,22 @@ export const projectsData: Project[] = [
     imageUrl:
       'https://res.cloudinary.com/dom5vocai/image/upload/f_auto,q_auto/ujo3hlp4p9hazxyrygav',
   },
+  {
+    title: 'PC Builds',
+    short_description: 'I built 2 custom desktop computers.',
+    long_description:
+      'Since I was a child I always wanted to build my own computer; it costs less in the long term and there are less limitations in activities. So, I researched every component, gained a general understanding on how computer hardware works together, and debugged issues. I now could now: Run 3D model software, experiment with ML/Ai models and VR, stream exceptional content to any streaming platform and play the newest games at high quality.',
+    skills: [
+      'Hardware',
+      'BIOS',
+      'Experiments',
+      'General Computer Architecture',
+    ],
+    topSkills: ['Hardware', 'Windows', 'Experiments'],
+    date: new Date(2023, 3, 30),
+    githubUrl: '',
+    deployedUrl: '',
+    imageUrl:
+      'https://res.cloudinary.com/dom5vocai/image/upload/f_auto,q_auto/tgkn38ozghqjkqwgf7cp',
+  },
 ];
