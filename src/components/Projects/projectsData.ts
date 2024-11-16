@@ -223,7 +223,7 @@ export const projectsData: Project[] = [
     title: 'Social Media Discord Bot',
     short_description: 'A node.js server that houses a discord bot',
     long_description:
-      'The goal of this project was to create a discord bot that would post to a discord server when new social media data was detected. I wanted to also learn about about self hosting so I configured it to run on my Raspberry Pi and run it from there.',
+      'The goal of this project was to create a discord bot that would post to a discord server when new social media data was detected. I wanted to also learn about self hosting so I configured it to run on my Raspberry Pi and run it from there.',
     skills: [
       'Experimentation',
       'Node.JS',
